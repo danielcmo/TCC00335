@@ -16,17 +16,6 @@ CREATE TABLE AirQualityUCI (
   AH REAL
 );
 
--- Created from python:
--- with open('AirQualityUCI.csv', "r") as f:
---   entries = list([line.rstrip().split(';') for line in f])[1:]
---   for entry in entries:
---     entry_date = entry[0].split('/')
---     entry_date = "{}/{}/{}".format(entry_date[2], entry_date[1], entry_date[0])
---     entry_time = entry[1].replace('.', ':')
---     print("INSERT INTO AirQualityUCI (Date, Time, CO, PT08S1, NMHC, C6H6, PT08S2, NOx, PT08S3, NO2, PT08S4, PT08S5, T, RH, AH) VALUES('{}', '{}', {});".format(
---           entry_date, entry_time, ", ".join([e.replace(',', '.') for e in entry[2:-2]])))
---
-
 INSERT INTO AirQualityUCI (Date, Time, CO, PT08S1, NMHC, C6H6, PT08S2, NOx, PT08S3, NO2, PT08S4, PT08S5, T, RH, AH) VALUES('2004/03/10', '18:00:00', 2.6, 1360, 150, 11.9, 1046, 166, 1056, 113, 1692, 1268, 13.6, 48.9, 0.7578);
 INSERT INTO AirQualityUCI (Date, Time, CO, PT08S1, NMHC, C6H6, PT08S2, NOx, PT08S3, NO2, PT08S4, PT08S5, T, RH, AH) VALUES('2004/03/10', '19:00:00', 2, 1292, 112, 9.4, 955, 103, 1174, 92, 1559, 972, 13.3, 47.7, 0.7255);
 INSERT INTO AirQualityUCI (Date, Time, CO, PT08S1, NMHC, C6H6, PT08S2, NOx, PT08S3, NO2, PT08S4, PT08S5, T, RH, AH) VALUES('2004/03/10', '20:00:00', 2.2, 1402, 88, 9.0, 939, 131, 1140, 114, 1555, 1074, 11.9, 54.0, 0.7502);
